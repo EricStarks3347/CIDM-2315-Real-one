@@ -1,0 +1,24 @@
+namespace HW3pt2;
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the value of N:");
+        int N = Convert.ToInt32(Console.ReadLine());
+
+        // Loop through rows
+        for (int i = 0; i < N; i++)
+        {
+            // Loop through columns
+            for (int j = 0; j < N; j++)
+            {
+                // Print '*' for each cell
+                Console.Write("#");
+            }
+            // Move to the next row
+            Console.WriteLine();
+        }
+    }
+}
