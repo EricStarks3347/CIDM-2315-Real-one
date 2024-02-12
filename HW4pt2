@@ -1,0 +1,65 @@
+namespace HW4pt2;
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the number N:");
+        int N = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter the shape (left or right):");
+        string shape = Console.ReadLine();
+
+        if (shape == "left")
+        {
+            // Print left triangle
+            PrintLeftTriangle(N);
+        }
+        else if (shape == "right")
+        {
+            // Print right triangle
+            PrintRightTriangle(N);
+        }
+        else
+        {
+            Console.WriteLine("Invalid shape input. Please enter either 'left' or 'right'.");
+        }
+    }
+
+    static void PrintLeftTriangle(int N)
+    {
+        // Iterate through rows
+        for (int i = 1; i <= N; i++)
+        {
+            // Print asterisks for each column in the row
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine(); // Move to the next row
+        }
+    }
+
+    static void PrintRightTriangle(int N)
+    {
+        // Iterate through rows
+        for (int i = 1; i <= N; i++)
+        {
+            // Print spaces
+            for (int k = N - i; k > 0; k--)
+            {
+                Console.Write(" ");
+            }
+
+            // Print asterisks for each column in the row
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine(); // Move to the next row
+        }
+    }
+}
